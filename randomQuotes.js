@@ -1,8 +1,9 @@
 $(document).ready(function () {
+    
     $("#getMessage").on("click", function () {
         $.getJSON("randomQuotes.json", function (json) {
-            var html = "";
-            var randomPick = Math.floor(Math.random() * 6);
+            var text = "";
+            var randomPick = Math.floor(Math.random() * json.length);
             
             json = json.filter(function (val) {
                 return (val.id === randomPick);
@@ -10,13 +11,17 @@ $(document).ready(function () {
             
             json.forEach(function (val) {
                 var keys = Object.keys(val);
-                html += "<div class = 'programming'>";
-                html += "<strong>" + "\"" + val.quote + "\"" + "</strong>";
-                
-                html += "</div><br>";
+                text += "<div class = 'programming'>";
+                text += "<strong>" + "\"" + val.quote + "\"" + "</strong>";
+                text += "</div><br>";
             });
-            
-            $(".message").html(html);
+        
+            $(".message").html(text);
         });
+        
+        $(".twitter-share-button").attr("href", 'https://twitter.com/intent/tweet?text=' + myquote);
     });
+    
+    
+    
 });
