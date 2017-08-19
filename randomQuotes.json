@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "quote": "HTML"
+    },
+    {
+        "id": 1,
+        "quote": "CSS"
+    },
+    {
+        "id": 2,
+        "quote": "javaScript"
+    },
+    {
+        "id": 3,
+        "quote": "jQuery"
+    },
+    {
+        "id": 4,
+        "quote": "Bootstrap"
+    },
+    {
+        "id": 5,
+        "quote": "AJAX"
+    }
+]
